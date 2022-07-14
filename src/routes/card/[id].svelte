@@ -11,9 +11,10 @@
 </script>
 
 <script>
-    export let card;
     import '../../assets/styles/savecard.css'
     import CardHeader from '../../components/cardHeader.svelte';
+
+    export let card;
 </script>
 
 <div class="wrapper">

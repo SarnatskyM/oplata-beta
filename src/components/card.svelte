@@ -2,7 +2,7 @@
     export let card;
 </script>
 
-<a href="/card/{card.id}" class="card-bind ">
+<a href="/card/{card.id}" class="card-bind">
     <div class="card-bind__wrap sber">
         <div class="card-bind__img">
             <img class="card-bind__logo" src="/pay/sbermobilelogo.png" alt="">
