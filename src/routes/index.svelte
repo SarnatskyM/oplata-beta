@@ -1,8 +1,10 @@
 <script>
+    import {defineUserLanguage} from '../helpers/helper.js';
     import '../assets/styles/index.css';
-    import CardHeader from '../components/cardHeader.svelte';
-    import { t } from "../languages/i18n";
+    import CardHeader from '../components/formPage/cardHeader.svelte';
+    import { t, locale } from "../languages/i18n";
     import { onMount } from 'svelte';
+    import WaterMarks from '../components/formPage/waterMarks.svelte';
     
 
     let cardNumber = "";
@@ -26,6 +28,7 @@
     }
 
     onMount(() => {
+        $locale = defineUserLanguage();
         const input = document.querySelector('#InputCardnum');
         input.addEventListener('input', function (evt) {
             input.value = input.value
@@ -38,6 +41,9 @@
 </script>
 
 <svelte:head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
     <link href="http://fonts.cdnfonts.com/css/bambino-2" rel="stylesheet">
 </svelte:head>
@@ -103,12 +109,6 @@
                 </div>
             </form>
         </section>
-        <section>
-            <div class="vefifed">
-                <img src="/pay/psi.png" alt="">
-                <img src="/pay/secur.png" alt="">
-                <img src="/pay/verifedvisa.png" alt="">
-            </div>
-        </section>
+        <WaterMarks/>
     </div>
 </body>

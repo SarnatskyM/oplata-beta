@@ -26,6 +26,10 @@
   margin-left: 4px;
 }
 
+.cards a{
+  text-decoration: none;
+}
+
 .active {
   border: solid;
   border-radius: 1px;
@@ -189,6 +193,7 @@ margin: 15px  0;
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 5px;
 }
+
 
 
 

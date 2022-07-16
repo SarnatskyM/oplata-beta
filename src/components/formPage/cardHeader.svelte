@@ -1,7 +1,7 @@
 <script>
-    import { cards } from "../stores/cardStore";
-    import Card from "../components/card.svelte";
-    import { t, locale, locales } from "../languages/i18n";
+    import { cards } from "../../stores/cardStore";
+    import Card from "./card.svelte";
+    import { t, locale, locales } from "../../languages/i18n";
 </script>
 
 <p>

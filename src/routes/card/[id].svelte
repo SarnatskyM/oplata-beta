@@ -11,9 +11,10 @@
 </script>
 
 <script>
+    import { t } from "../../languages/i18n";
     import '../../assets/styles/savecard.css'
-    import CardHeader from '../../components/cardHeader.svelte';
-
+    import CardHeader from '../../components/formPage/cardHeader.svelte';
+    import WaterMarks from '../../components/formPage/waterMarks.svelte';
     export let card;
 </script>
 
@@ -32,7 +33,7 @@
                         </div>
                         <div class="card__date">
                             <div class="card__date-wrap">
-                                <p class=" card__date-dt ">Действует до</p>
+                                <p class=" card__date-dt ">{$t('card_id')}</p>
                                 <p class=" card__date-st ">{card[0].card_gg} / {card[0].card_mm}</p>
                             </div>
                         </div>
@@ -43,16 +44,11 @@
                     </div>
                 </div>
                 <div class="card__button">
-                    <button id="btn" type="submit">Пополнить</button>
+                    <a href="check">
+                        <button id="btn" type="submit">{$t('index.cardButton')}</button>
+                    </a>
                 </div>
             </div>
     </section>
-    <section>
-        <div class="vefifed">
-            <img src="/pay/psi.png" alt="">
-            <img src="/pay/secur.png" alt="">
-            <img src="/pay/verifedvisa.png" alt="">
-            
-        </div>
-    </section>
+    <WaterMarks/>
 </div>
